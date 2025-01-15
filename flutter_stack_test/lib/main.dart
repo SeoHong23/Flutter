@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       home: SafeArea(
           child: Scaffold(
         body: Stack(
-          alignment: Alignment.centerLeft,
+          alignment: Alignment.bottomRight,
           children: [
             Container(
               width: 200,

@@ -55,8 +55,6 @@ class RecipePage extends StatelessWidget {
             RecipeListItem('coffee', 'Made Coffee'),
             RecipeListItem('burger', 'Made Burger'),
             RecipeListItem('pizza', 'Made Pizza'),
-            // 레시피 아이템
-            // 레시피 아이템
           ],
         ),
       ),
@@ -68,13 +66,6 @@ class RecipePage extends StatelessWidget {
   AppBar _buildRecipeAppBar() {
     return AppBar(
       backgroundColor: Colors.white,
-      // iconTheme: IconThemeData(color: Colors.black),
-      // bottom: PreferredSize(
-      //     preferredSize: Size.fromHeight(1.0),
-      //     child: Container(
-      //       color: Colors.black54,
-      //       height: 1.0,
-      //     )),
       elevation: 0.0,
       flexibleSpace: Container(
         decoration: BoxDecoration(color: Colors.white, boxShadow: [
