@@ -40,19 +40,18 @@ class PostWriteViewModel
       // 데이터 가공 처리
       final body = {"title": title, "content": content};
 
-      Map<String, dynamic> resBody =
-          // Response response = await dio.post('/api/post', data: body);
-          // Map<String, dynamic> responseBody = response.data;
+      Map<String, dynamic> resBody = await postRepository.save(body);
+      // Response response = await dio.post('/api/post', data: body);
+      // Map<String, dynamic> responseBody = response.data;
 
-          //
-          // if (!responseBody['success']) {
-          //   ExceptionHandler.handleException(
-          //       responseBody['errorMessage'], StackTrace.current);
-          //   return;
-          // }
+      if (!resBody['success']) {
+        ExceptionHandler.handleException(
+            resBody['errorMessage'], StackTrace.current);
+        return;
+      }
 
-          // 시스템 키보드가 있다면 자동 닫기
-          FocusScope.of(mContext).unfocus();
+      // 시스템 키보드가 있다면 자동 닫기
+      FocusScope.of(mContext as BuildContext).unfocus();
 
       // 게시글 완성 메세지 출력
       ScaffoldMessenger.of(mContext)
