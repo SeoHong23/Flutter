@@ -4,7 +4,7 @@
 
 import 'package:class_f_story/_core/utils/exception_handler.dart';
 import 'package:class_f_story/_core/utils/my_http.dart';
-import 'package:class_f_story/data/repository/post_ropository.dart';
+import 'package:class_f_story/data/repository/post_repository.dart';
 import 'package:class_f_story/data/repository/user_repository.dart';
 import 'package:class_f_story/main.dart';
 import 'package:flutter/cupertino.dart';
